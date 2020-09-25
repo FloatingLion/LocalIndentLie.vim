@@ -14,7 +14,7 @@ my localIndentLie;
 
 Example:
 
-![](./test/example.gif)
+![](https://github.com/FloatingLion/LocalIndentLie.vim/blob/master/test/example.gif)
 
 
 

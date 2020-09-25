@@ -12,7 +12,7 @@ tell me, localIndentLie;
 my localIndentLie;
 ```
 
-![Example](https://github.com/FloatingLion/LocalIndentLie.vim/blob/master/test/example.gif)
+![Example](https://raw.githubusercontent.com/FloatingLion/LocalIndentLie.vim/master/test/example.gif)
 
 ### Q：它是开箱即用的吗？
 

@@ -14,7 +14,7 @@ my localIndentLie;
 
 Example:
 
-![](test/example.gif)
+![](./test/example.gif)
 
 
 

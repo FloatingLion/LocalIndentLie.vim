@@ -2,7 +2,7 @@
 
 **This plugin is inspired by [indentLine](https://github.com/Yggdroot/indentLine) and [local-indent.vim](https://github.com/tweekmonster/local-indent.vim).**
 
-这是一个为你的vim/nvim添加缩进线的插件，它保证随时只有一条缩进线存在。
+
 
 ----
 
@@ -12,11 +12,7 @@ tell me, localIndentLie;
 my localIndentLie;
 ```
 
-Example:
-
-![](https://github.com/FloatingLion/LocalIndentLie.vim/raw/master/test/example.gif)
-
-
+![Example](https://github.com/FloatingLion/LocalIndentLie.vim/blob/master/test/example.gif)
 
 ### Q：它是开箱即用的吗？
 

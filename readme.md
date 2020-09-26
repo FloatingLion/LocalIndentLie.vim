@@ -19,6 +19,7 @@ my localIndentLie;
 A：不是的，你需要用命令`:LocalIndentLieOn`来打开LocalIndentLie，用`:LocalIndentLieOff`来关闭它。你也可以将
 
 ```vim
+" 对某些文件开启
 autocmd FileType python,haskell
       \ LocalIndentLieOn
 " 或者对所有文件启用
@@ -68,7 +69,7 @@ let g:localIndentLie_termColor = 240
 let g:localIndentLie_guiColor  = 'grey' " or '#RRGGBB'
 ```
 
-更多的颜色选项参见`:help ctermcolors`或者`:help guicolors`
+更多的颜色选项参见`:help cterm-colors`或者`:help gui-colors`
 
 ### Q：嗯，但是它还是存在各种各样的问题
 

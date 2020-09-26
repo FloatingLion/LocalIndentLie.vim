@@ -201,7 +201,7 @@ endfunction
 function s:CleanLocalLie()
   if !empty(g:_localIndentLie.key)
     for k in g:_localIndentLie.key
-      call matchdelete(k)
+      silent! call matchdelete(k)
     endfor
     let g:_localIndentLie.key= []
   endif

@@ -63,7 +63,7 @@ let g:localIndentLie_char = '┊' " '|', '¦', '┆',...
 
 默认地，缩进线的颜色会使用你的Operator高亮组样式，你也可以用`g:localIndentLie_termColor`或者`g:localIndentLie_guiColor`来选择你喜欢的颜色
 
-```
+```vim
 let g:localIndentLie_termColor = 240
 let g:localIndentLie_guiColor  = 'grey' " or '#RRGGBB'
 ```

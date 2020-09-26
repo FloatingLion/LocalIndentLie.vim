@@ -1,5 +1,17 @@
 " configuration {{{
 "
+" COMMAND:
+" :LocalIndentLieOn
+" Enable LocalIndentLie.
+"
+" COMMAND:
+" :LocalIndentLieOff
+" Disable it.
+"
+" COMMAND:
+" :LocalIndentLieStatus
+" Check LocalIndentLie's status (on|off).
+"
 " VARIABLE:
 " g:localIndentLie_char :: Char
 " Default:     '|'
@@ -25,18 +37,6 @@
 " &conceallevel and &concealcursor in buffer. Use 
 " `let g:localIndentLie_useconceal = 0` to set them by manual.
 "
-" COMMAND:
-" :LocalIndentLieOn
-" Enable LocalIndentLie.
-"
-" COMMAND:
-" :LocalIndentLieOff
-" Disable it.
-"
-" COMMAND:
-" :LocalIndentLieStatus
-" Check LocalIndentLie's status (on|off).
-"
 " LICENSE: MIT
 " }}}
 
@@ -48,9 +48,9 @@ endif
 let g:loaded_LocalIndentLie = 1
 
 if !has('conceal') || !exists('*matchaddpos')
-  command! LocalIndentLieOn     echo "Your vim doesn't support LocalIndentLie."
-  command! LocalIndentLieOff    echo "Your vim doesn't support LocalIndentLie."
-  command! LocalIndentLieStatus echo "Your vim doesn't support LocalIndentLie."
+  command! LocalIndentLieOn     echo "Your vim isn't supporting LocalIndentLie."
+  command! LocalIndentLieOff    echo "Your vim isn't supporting LocalIndentLie."
+  command! LocalIndentLieStatus echo "Your vim isn't supporting LocalIndentLie."
   finish
 endif
 

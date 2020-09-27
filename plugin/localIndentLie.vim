@@ -227,11 +227,7 @@ function s:Update(pre_check)
     return
   endif
 
-  if !&expandtab
-    let where = g:_localIndentLie.level / &tabstop + 1
-  else
-    let where = g:_localIndentLie.level + 1
-  endif
+  let where = g:_localIndentLie.level + 1
 
   let iter   = g:_localIndentLie.lower
   let bound  = g:_localIndentLie.upper

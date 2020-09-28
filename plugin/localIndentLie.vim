@@ -9,6 +9,14 @@
 " Disable it.
 "
 " COMMAND:
+" :LocalIndentLieRe
+" Restart LocalIndentLie
+"
+" COMMAND:
+" :LocalIndentLieToggle
+" DO WHAT YOU ARE THINGKING
+"
+" COMMAND:
 " :LocalIndentLieStatus
 " Check LocalIndentLie's status (on|off).
 "
@@ -88,6 +96,7 @@ command! -nargs=0 LocalIndentLieOn call s:SwitchLocalIndentLieOn()
 command! -nargs=0 LocalIndentLieOff call s:SwitchLocalIndentLieOff()
 command! -nargs=0 LocalIndentLieStatus echo s:CheckStatus()
 command! -nargs=0 LocalIndentLieRe call s:SwitchLocalIndentLieRe()
+command! -nargs=0 LocalIndentLieToggle call s:SwitchLocalIndentLieToggle()
 autocmd FileType * call s:CleanLocalLie()
 "}}}
 
@@ -158,6 +167,18 @@ endfunction
 function s:SwitchLocalIndentLieRe()
   call s:SwitchLocalIndentLieOff()
   call s:SwitchLocalIndentLieOn()
+  call s:Update(0)
+endfunction
+"}}}
+
+"Toggle{{{
+function s:SwitchLocalIndentLieToggle()
+  if exists('b:localIndentLieRunning')
+    call s:SwitchLocalIndentLieOff()
+  else
+    call s:SwitchLocalIndentLieOn()
+    call s:Update(0)
+  endif
 endfunction
 "}}}
 

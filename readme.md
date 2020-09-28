@@ -46,6 +46,10 @@ set expandtab
 
 A：是的，所以我们建议只在部分`FileType`中使用LocalIndentLie。:)
 
+#### q：你看到在json里面打开它的样子了吗？简直就是地狱！
+
+a：好吧，LocalIndentLie确实还不能和其他使用了conceal属性的功能很好地兼容，我们会努力改进。暂时的解决方案请参见上一条。
+
 ### Q：为什么在Backspace的时候会花屏？
 
 A：我也在vim里遇到了这个情况，但是在nvim里面一切正常，我还不能断言这是什么问题。如果这还在你的容忍范围之内，可以使用`g:localIndentLie_insertDisable`来缓解一下心情，它将禁用`Insert-Mode`中的LocalIndentLie。

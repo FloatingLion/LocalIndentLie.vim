@@ -87,6 +87,7 @@ endif
 command! -nargs=0 LocalIndentLieOn call s:SwitchLocalIndentLieOn()
 command! -nargs=0 LocalIndentLieOff call s:SwitchLocalIndentLieOff()
 command! -nargs=0 LocalIndentLieStatus echo s:CheckStatus()
+command! -nargs=0 LocalIndentLieRe call s:SwitchLocalIndentLieRe()
 autocmd FileType * call s:CleanLocalLie()
 "}}}
 
@@ -116,10 +117,10 @@ function s:SwitchLocalIndentLieOn()
   endif
   let b:localIndentLieCLRec  = &conceallevel
   let b:localIndentLieCCRec = &concealcursor
-  let &l:conceallevel          = 1
-  let &l:concealcursor         = "vin"
 
   if g:localIndentLie_useconceal
+  let &l:conceallevel  = 1
+  let &l:concealcursor = "vin"
     if !exists('g:localIndentLie_termColor') && !exists('g:localIndentLie_guiColor')
       highlight! link Conceal Operator
     else
@@ -150,6 +151,13 @@ function s:SwitchLocalIndentLieOff()
     autocmd!
   augroup END
   unlet b:localIndentLieRunning
+endfunction
+"}}}
+
+"Re{{{
+function s:SwitchLocalIndentLieRe()
+  call s:SwitchLocalIndentLieOff()
+  call s:SwitchLocalIndentLieOn()
 endfunction
 "}}}
 
